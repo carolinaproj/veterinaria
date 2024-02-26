@@ -1,5 +1,5 @@
 <?php 
-require 'includes/database.php';
+require '../includes/database.php';
 
 $db = new Database();
 $con = $db->conectar();
@@ -13,18 +13,18 @@ $con = $db->conectar();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <?php include("includes/titulo.php"); ?>
+    <?php include("../includes/titulo.php"); ?>
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php require('css.php'); ?>
+    <?php require('../css.php'); ?>
 </head>
 
 <body>
     <aside id="left-panel" class="left-panel">
-        <?php include('includes/menu.php'); ?>
+        <?php include('../includes/menu.php'); ?>
     </aside>
     <div id="right-panel" class="right-panel">
-        <?php include('includes/header.php'); ?>
+        <?php include('../includes/header.php'); ?>
         <div class="content">
             <div class="animated fadeIn">
                 <div class="row">
@@ -70,9 +70,9 @@ $i=0;
     <td><?php echo $row['direccion_usu']?></td>
     <td><?php echo $row['ID_tip_usu']?></td>
     <td><?php echo $row['ID_mascota']?></td>
-    <td><button type="button" class="btn btn-success">Editar</button>
+    <td><button type="button" src="update.php" class="btn btn-success">Editar</button>
 </td>
-    <td><button type="button" class="btn btn-danger">Eliminar</button>
+    <td><a href="update.php" button-type="button" class="btn btn-danger">Eliminar</a>
 </td>
 
     </tr>
@@ -100,9 +100,9 @@ $i=0;
             </div>
         </div>
         <div class="clearfix"></div>
-        <?php include('includes/footer.php'); ?>
+        <?php include('../includes/footer.php'); ?>
     </div>
-    <?php include('js.php'); ?>
+    <?php include('../js.php'); ?>
 </body>
 
 </html>
