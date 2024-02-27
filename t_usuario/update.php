@@ -6,15 +6,6 @@ $con = $db->conectar();
 
 
 
-ID_usuario='$usuario', 
-  cc_usu='$documento',
-  nombre_usu='$nombres',
-  telefono_usu='$telefono',
-  correo_usu='$correo',
-  direccion_usu='$direccion',
-  contraseña_usu='$contraseña',
-  ID_tip_usu='$id_tip_usu',
-  ID_mascota='$id_mascota',
 
 if (isset($_POST['cambio']))
 {
@@ -45,7 +36,6 @@ if (isset($_POST['cambio']))
         echo"<script>window.location='recuperar_cont.php'</script>";
     
     }
-}
 
     if (isset($_POST['cambiar'])){
    $contra = $_POST['contra'];
@@ -59,13 +49,10 @@ if (isset($_POST['cambio']))
    echo"<script>window.location='login.php'</script>";
 
 }
+
+}
+
 ?>
-
-
-
-
-
-
 
 
 <?php
@@ -86,5 +73,6 @@ if (isset($_POST['cambio']))
   WHERE ID_usuario='$usuario'"; 
 
   mysqli_query($conexion,$_UPDATE_SQL);
+
 
   ?>
